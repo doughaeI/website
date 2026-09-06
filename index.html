@@ -40,6 +40,24 @@
             line-height: 1.6;
         }
 
+        .dropdown {
+            color: #a8c5e3;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .dropdown summary {
+            cursor: pointer;
+        }
+
+        .dropdown-text {
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+
         /* Phone */
         @media (max-width: 600px) {
             body {
@@ -79,6 +97,31 @@
             <p>certified sunday lover</p>
             <p>more soon...... i dont know how to code</p>
         </div>
+
+        <details class="dropdown">
+    <summary>favorite games</summary>
+    <div class="dropdown-text">
+        Minecraft<br>
+        Undertale<br>
+        Stardew Valley
+    </div>
+</details>
+
+<details class="dropdown">
+    <summary>favorite music</summary>
+    <div class="dropdown-text">
+        Artist 1<br>
+        Artist 2<br>
+        Artist 3
+    </div>
+</details>
+
+<details class="dropdown">
+    <summary>about me</summary>
+    <div class="dropdown-text">
+        Some information about me goes here.
+    </div>
+</details>
 
     </div>
 
