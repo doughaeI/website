@@ -71,7 +71,9 @@
         top: -30px;
         color: #a8c5e3;
         animation: fall linear infinite;
+        font-weight: normal;
     }
+
 
     @keyframes fall {
         0% {
@@ -176,19 +178,28 @@
 <script>
     const snow = document.getElementById("snow");
 
-    for (let i = 0; i < 80; i++) {
+    // Fewer snowflakes = less clutter
+    for (let i = 0; i < 45; i++) {
         const flake = document.createElement("div");
 
-        // Randomly choose between snowflake and star
+        // Snowflakes and little stars
         flake.textContent = Math.random() > 0.5 ? "❄" : "✦";
 
         flake.className = "snowflake";
 
         flake.style.left = Math.random() * 100 + "vw";
-        flake.style.animationDuration = (5 + Math.random() * 8) + "s";
-        flake.style.animationDelay = Math.random() * 8 + "s";
-        flake.style.fontSize = (8 + Math.random() * 16) + "px";
-        flake.style.opacity = 0.3 + Math.random() * 0.7;
+
+        // Slower, gentler falling
+        flake.style.animationDuration = (8 + Math.random() * 10) + "s";
+
+        // Spread out when they appear
+        flake.style.animationDelay = Math.random() * 10 + "s";
+
+        // Smaller particles
+        flake.style.fontSize = (6 + Math.random() * 9) + "px";
+
+        // Much lighter / more subtle
+        flake.style.opacity = 0.15 + Math.random() * 0.35;
 
         snow.appendChild(flake);
     }
