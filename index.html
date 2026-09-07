@@ -4,140 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>eighth dawn</title>
-
-    <link rel="icon" type="image/png" href="img/icon.png">
-
-    <script src="https://u.widget.st/ar.js"></script>
+    <title>My Website</title>
 
     <style>
-        body {
-            background-color: white;
-            color: #a8c5e3;
-            font-family: Georgia, serif;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            margin: 0;
-            padding: 40px;
+        * {
+            box-sizing: border-box;
         }
 
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: white;
+            color: black;
+        }
+
+        .page {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            padding: 3.5vw;
+            gap: 6vw;
+        }
+
+        /* LEFT SIDE */
+
+        .image-section {
+            background: black;
+            min-height: 90vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-text {
+            position: absolute;
+            left: 35px;
+            top: 190px;
+            color: white;
+            font-size: 7vw;
+            line-height: 0.95;
+            font-weight: 400;
+        }
+
+        /* RIGHT SIDE */
+
+        .content {
+            padding-top: 10px;
+            max-width: 600px;
         }
 
         h1 {
-            font-size: 20px;
-            margin-bottom: 30px;
+            font-size: 5vw;
+            font-weight: 400;
+            margin: 0 0 15px 0;
         }
 
-        .main-image {
-            display: block;
-            width: 75%;
-            height: auto;
-            margin: 0 auto 25px auto;
+        .intro {
+            font-size: 3vw;
+            line-height: 1.1;
+            margin-bottom: 70px;
         }
 
-        .info {
-            font-size: 16px;
-            line-height: 1.6;
+        /* DROPDOWNS */
+
+        details {
+            margin-bottom: 55px;
         }
 
-        .dropdown {
-            color: #7799bd;
-            font-size: 18px;
-            font-weight: bold;
-            margin: 20px 0;
-        }
-
-        .dropdown summary {
+        summary {
             cursor: pointer;
+            list-style: none;
+            font-size: 3vw;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::before {
+            content: "▼";
+            font-size: 0.7em;
+        }
+
+        details[open] summary::before {
+            transform: rotate(180deg);
         }
 
         .dropdown-text {
-            margin-top: 10px;
-            line-height: 1.6;
-            text-align: justify;
-            font-weight: normal;
+            font-size: 2.5vw;
+            margin-left: 65px;
+            margin-top: 15px;
         }
 
-        /* Phone */
-        @media (max-width: 600px) {
-            body {
-                padding: 25px 15px;
-                font-size: 16px;
+        /* PHONE */
+
+        @media (max-width: 700px) {
+
+            .page {
+                display: block;
+                padding: 20px;
+            }
+
+            .image-section {
+                min-height: 500px;
+                margin-bottom: 40px;
+            }
+
+            .image-text {
+                font-size: 16vw;
+                left: 20px;
+                top: 150px;
             }
 
             h1 {
-                font-size: 26px;
-                margin-bottom: 25px;
+                font-size: 14vw;
             }
 
-            .main-image {
-                width: 100%;
-                margin-bottom: 20px;
+            .intro {
+                font-size: 8vw;
+                margin-bottom: 50px;
             }
 
-            .info {
-                font-size: 13px;
-                line-height: 1.5;
-            }
-
-            .dropdown {
-                color: #a8c5e3;
-                font-size: 17px;
-                font-weight: bold;
-                margin: 20px 0;
+            summary {
+                font-size: 8vw;
             }
 
             .dropdown-text {
-                margin-top: 10px;
-                line-height: 1.6;
-                text-align: justify;
-                font-size: 14px;
-                font-weight: normal;
+                font-size: 6vw;
+                margin-left: 40px;
             }
-            
+        }
     </style>
 </head>
 
 <body>
 
-    <div class="container">
+    <main class="page">
 
-        <h1>kat, infj. any / all prns</h1>
+        <!-- LEFT -->
+        <section class="image-section">
+            <div class="image-text">
+                image<br>
+                floating on<br>
+                the side
+            </div>
+        </section>
 
-        <img src="img/eighthdawn.png"
-             alt="Eighth Dawn"
-             class="main-image">
 
-        <details class="dropdown">
-    <summary>about my account</summary>
-    <div class="dropdown-text">
-        • sunday centric account<br>
-        • primarily focus on hsr (sunday) but also rarely genshin or other hsr characters (e.g. robin)<br>
-        • i am NOT a sunday yume! please do not see me as such. i do not ship myself with him i just really really love him as a character and am attached to him. <br>
-    </div>
-</details>
+        <!-- RIGHT -->
+        <section class="content">
 
-<details class="dropdown">
-    <summary>ABOUT SHIPS (IMPORTANT)</summary>
-    <div class="dropdown-text">
-        • i do not ship sunday with anyone. i see sunday as a solo character. i also headcanon him as aroace. <br>
-        • because of this, when i rt art with a ship name in the hastags, please do not misunderstand. i rt it in a platonic sense / because the art is pretty not because i ship the characters involved. <br>
-        • similarly to this, the people i follow do not reflect my own personal tastes. just because i follow someone who focuses on a ship does not mean i ship it or even like it. i just think theyre nice / cool and like sunday so i gave them a follow. <br>
-    </div>
-</details>
+            <h1>header</h1>
 
-<details class="dropdown">
-    <summary>dni</summary>
-    <div class="dropdown-text">
-        i have no specific dni! honestly i am more the muting people type. but if i did block you at some point you can ask to be unblocked in dms i might consider it (sometimes i block out of very petty reasons)<br>
-    </div>
-</details>
+            <div class="intro">
+                text text text text<br>
+                [self introduction]
+            </div>
 
-    </div>
+
+            <details>
+                <summary>dropdown 1</summary>
+                <div class="dropdown-text">
+                    dropdown text
+                </div>
+            </details>
+
+
+            <details>
+                <summary>dropdown 2</summary>
+                <div class="dropdown-text">
+                    dropdown text
+                </div>
+            </details>
+
+
+            <details>
+                <summary>dropdown 3</summary>
+                <div class="dropdown-text">
+                    dropdown text
+                </div>
+            </details>
+
+        </section>
+
+    </main>
 
 </body>
 </html>
