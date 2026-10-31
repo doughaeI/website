@@ -1,0 +1,59 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>esunday media</title>
+
+<link rel="icon" type="image/png" href="img/icon.png">
+
+<script src="https://u.widget.st/ar.js"></script>
+
+<style>
+    body {
+        background-color: white;
+        color: #a8c5e3;
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+        padding: 40px;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-family: Georgia, serif;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .main-image {
+        display: block;
+        width: 75%;
+        height: auto;
+        margin: 0 auto 25px auto;
+    }
+
+    .info {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .dropdown {
+        color: #7799bd;
+        font-size: 18px;
+        font-weight: bold;
+        margin: 20px 0;
+    }
+
+    .dropdown summary {
+        cursor: pointer;
+    }
+
+    .dropdown-text {
+        margin-top: 10px;
+        line-height: 1.6;
+        text-align: justify;
+        font-weight: normal;
+    }
